@@ -15,6 +15,7 @@ public class LoginPage {
 		
 	}
 	
+	//page factory
 	@FindBy(xpath="//input[@id='txtUsername']")
 	WebElement usernametxtbox;
 	@FindBy(xpath="//input[@id='txtPassword']")

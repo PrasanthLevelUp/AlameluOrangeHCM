@@ -11,7 +11,7 @@ public class TC1_ValidateLogin extends DriverClass{
 	public void logintest() {
 		laucnhdriver();
 		LoginPage login = new LoginPage(driver);
-		login.login("Admin", "admin123");
+		login.login(prop.getProperty("username"), prop.getProperty("password"));
 		teardown();
 	}
 
