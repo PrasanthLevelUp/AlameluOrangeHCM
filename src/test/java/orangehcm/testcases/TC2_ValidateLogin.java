@@ -9,7 +9,7 @@ import com.aventstack.extentreports.Status;
 import orangehcm.framework.DriverClass;
 import orangehcm.pages.LoginPage;
 
-public class TC1_ValidateLogin extends DriverClass {
+public class TC2_ValidateLogin extends DriverClass {
 
 	@Test
 	public void logintest() {
