@@ -1,9 +1,18 @@
 package orangehcm.pages;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
 public class HomePage {
 	
-	public void test() {
+	WebDriver mydriver;
+
+	public HomePage(WebDriver driver) {
+		this.mydriver=driver;
+		PageFactory.initElements(driver, this);
 		
 	}
+	
+	
 
 }
