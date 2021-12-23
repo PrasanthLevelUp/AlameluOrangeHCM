@@ -17,7 +17,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ExcelFileRead {
 	public static XSSFWorkbook book=null;
 	public static XSSFSheet sheet=null;
-	public int rowno=0;
+	public static int rowno=0;
 	
 	public static void readexcel(String excelfile,String sheetname) {
 		File file = new File(excelfile);
@@ -32,7 +32,7 @@ public class ExcelFileRead {
 		}
 	}
 	
-	public HashMap<String,String> getData(String TCName) {
+	public static HashMap<String,String> getData(String TCName) {
 		int lastrow =  sheet.getLastRowNum();
 		for(int i =1;i<lastrow;i++) {
 			String CurrentTCName = sheet.getRow(i).getCell(0).getStringCellValue();

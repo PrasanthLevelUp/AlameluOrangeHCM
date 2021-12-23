@@ -10,6 +10,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -21,6 +22,7 @@ public class DriverClass {
 	public static String testdatafile = "./src/main/resources/TestData.xlsx";
 	public static Properties prop = null;
 	public static ExtentReports extent = null;
+	public static ExtentTest test = null;
 
 	@BeforeSuite
 	public void setup() {

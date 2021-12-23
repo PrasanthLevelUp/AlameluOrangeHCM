@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import orangehcm.utils.SeleniumUtils;
+
 public class LoginPage {
 	
 	WebDriver mydriver;
@@ -24,9 +26,9 @@ public class LoginPage {
 	WebElement loginbtn;
 	
 	public HomePage login(String username,String password) {
-		usernametxtbox.sendKeys(username);
-		passwordtxtbox.sendKeys(password);
-		loginbtn.click();
+		SeleniumUtils.entertext(usernametxtbox, username);
+		SeleniumUtils.entertext(passwordtxtbox, password);
+		SeleniumUtils.seleiumclick(loginbtn);
 		return new HomePage(mydriver);
 	}
 	
