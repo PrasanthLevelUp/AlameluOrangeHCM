@@ -33,7 +33,7 @@ public class TC1_ValidateLogin extends DriverClass {
 		}
 	}
 	
-	@Test
+	@Test(enabled = false)
 	public void logintest2() {
 		test = extent.createTest(new Object(){}.getClass().getEnclosingMethod().getName());
 		try {

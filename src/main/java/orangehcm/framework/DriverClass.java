@@ -19,6 +19,7 @@ public class DriverClass {
 	public static WebDriver driver;
 	public static String configfile = "./src/main/resources/config.properties";
 	public static String extendreportpath = "./Reports";
+	public static String screenshotspath= System.getProperty("user.dir")+"/Screenshots";
 	public static String testdatafile = "./src/main/resources/TestData.xlsx";
 	public static Properties prop = null;
 	public static ExtentReports extent = null;
