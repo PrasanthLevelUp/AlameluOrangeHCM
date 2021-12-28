@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
 import orangehcm.framework.DriverClass;
@@ -49,13 +50,19 @@ public class SeleniumUtils extends DriverClass {
 	}
 	
 	public static void logpass(String desc) {
-		test.log(Status.PASS, desc+test.addScreenCaptureFromPath(getscreenshot()));
+		//test.log(Status.PASS, desc+test.addScreenCaptureFromPath(getscreenshot()));
+		test.pass(desc,MediaEntityBuilder.createScreenCaptureFromBase64String(getscreenBase64()).build());
 	}
 	
 	public static void logfail(String desc) {
-		test.log(Status.FAIL, desc+test.addScreenCaptureFromPath(getscreenshot()));
+		//test.log(Status.FAIL, desc+test.addScreenCaptureFromPath(getscreenshot()));
+		test.fail(desc,MediaEntityBuilder.createScreenCaptureFromBase64String(getscreenBase64()).build());
 	}
 	
+	
+	public static String getscreenBase64() {
+		return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+	}
 	
 	public static String getscreenshot() {
 		String filepath=null;
