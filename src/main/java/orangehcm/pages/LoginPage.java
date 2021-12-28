@@ -1,8 +1,11 @@
 package orangehcm.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import orangehcm.utils.SeleniumUtils;
@@ -24,6 +27,8 @@ public class LoginPage {
 	WebElement passwordtxtbox;
 	@FindBy(xpath="//input[@id='btnLogin']")
 	WebElement loginbtn;
+	@FindBys(@FindBy(xpath="//table[@id='resultTable']//tbody//child::tr"))
+	List<WebElement> results;
 	
 	public HomePage login(String username,String password) {
 		SeleniumUtils.entertext(usernametxtbox, username);

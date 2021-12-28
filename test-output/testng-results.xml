@@ -2,20 +2,20 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-25T23:02:35 IST" name="Suite" finished-at="2021-12-25T23:03:40 IST" duration-ms="64688">
+  <suite started-at="2021-12-28T21:54:23 IST" name="Suite" finished-at="2021-12-28T21:56:01 IST" duration-ms="98655">
     <groups>
     </groups>
-    <test started-at="2021-12-25T23:02:35 IST" name="Test" finished-at="2021-12-25T23:03:40 IST" duration-ms="64688">
+    <test started-at="2021-12-28T21:54:23 IST" name="Test" finished-at="2021-12-28T21:56:01 IST" duration-ms="98655">
       <class name="orangehcm.testcases.TC1_ValidateLogin">
-        <test-method is-config="true" signature="setup()[pri:0, instance:orangehcm.testcases.TC1_ValidateLogin@130c12b7]" started-at="2021-12-25T23:02:29 IST" name="setup" finished-at="2021-12-25T23:02:35 IST" duration-ms="5989" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:orangehcm.testcases.TC1_ValidateLogin@130c12b7]" started-at="2021-12-28T21:54:14 IST" name="setup" finished-at="2021-12-28T21:54:23 IST" duration-ms="9188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="logintest()[pri:0, instance:orangehcm.testcases.TC1_ValidateLogin@130c12b7]" started-at="2021-12-25T23:02:36 IST" name="logintest" finished-at="2021-12-25T23:03:40 IST" duration-ms="64568" status="PASS">
+        <test-method signature="logintest()[pri:0, instance:orangehcm.testcases.TC1_ValidateLogin@130c12b7]" started-at="2021-12-28T21:54:23 IST" name="logintest" finished-at="2021-12-28T21:56:01 IST" duration-ms="98265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:orangehcm.testcases.TC1_ValidateLogin@130c12b7]" started-at="2021-12-25T23:03:40 IST" name="teardown" finished-at="2021-12-25T23:03:43 IST" duration-ms="2588" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:orangehcm.testcases.TC1_ValidateLogin@130c12b7]" started-at="2021-12-28T21:56:02 IST" name="teardown" finished-at="2021-12-28T21:56:09 IST" duration-ms="7335" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
