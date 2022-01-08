@@ -2,6 +2,8 @@ package orangehcm.framework;
 
 import java.util.Properties;
 
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -19,17 +21,25 @@ public class DriverClass {
 	public static WebDriver driver;
 	public static String configfile = "./src/main/resources/config.properties";
 	public static String extendreportpath = "./Reports";
-	public static String screenshotspath= System.getProperty("user.dir")+"/Screenshots";
+	public static String screenshotspath = System.getProperty("user.dir") + "/Screenshots";
 	public static String testdatafile = "./src/main/resources/TestData.xlsx";
 	public static Properties prop = null;
 	public static ExtentReports extent = null;
 	public static ExtentTest test = null;
+	public static Logger logger = null;
 
 	@BeforeSuite
 	public void setup() {
 		prop = ProperityFile.loadPropertyFile(configfile);
 		extent = ExtendReportFile.extentReportconfig(extendreportpath);
 		ExcelFileRead.readexcel(testdatafile, prop.getProperty("sheetname"));
+		logger = LogManager.getLogger();
+		logger.debug("This is a debug message");
+		logger.info("This is an info message");
+		logger.warn("This is a warn message");
+		logger.error("This is an error message");
+		logger.fatal("This is a fatal message");
+
 	}
 
 	public void laucnhdriver() {

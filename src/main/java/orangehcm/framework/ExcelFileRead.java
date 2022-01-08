@@ -34,7 +34,7 @@ public class ExcelFileRead {
 	
 	public static HashMap<String,String> getData(String TCName) {
 		int lastrow =  sheet.getLastRowNum();
-		for(int i =1;i<lastrow;i++) {
+		for(int i =1;i<=lastrow;i++) {
 			String CurrentTCName = sheet.getRow(i).getCell(0).getStringCellValue();
 			if(CurrentTCName.equalsIgnoreCase(TCName)) {
 				rowno=i;

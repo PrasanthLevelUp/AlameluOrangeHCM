@@ -2,6 +2,7 @@ package orangehcm.testcases;
 
 import java.util.HashMap;
 
+import org.apache.logging.log4j.Level;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -22,6 +23,7 @@ public class TC1_ValidateLogin extends DriverClass {
 		HashMap<String,String> getdata = ExcelFileRead.getData(this.getClass().getSimpleName());
 		try {
 			laucnhdriver();
+			logger.info("test");
 			test.log(Status.PASS, "Driver Launched");
 			LoginPage login = new LoginPage(driver);
 			HomePage home = login.login(getdata.get("LoginUsername"), getdata.get("LoginPassword"));
